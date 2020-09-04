@@ -4,6 +4,16 @@
   "description": "Generate CSP headers with help from TypeScript",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "repository": {
+    "url": "git+https://github.com/entur/csp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/entur/csp/issues"
+  },
+  "homepage": "https://github.com/entur/csp#readme",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
     "build": "tsc",
     "prepublish": "npm run build"
@@ -16,5 +26,6 @@
   "license": "MIT",
   "devDependencies": {
     "typescript": "^4.0.2"
-  }
+  },
+  "dependencies": {}
 }
