@@ -14,7 +14,7 @@ npm install @entur/csp
 ```typescript
 // myCsp.ts
 
-import { stringifyCSP } from '@entur/csp'
+import { stringifyCSP, Directive, PolicyValue } from '@entur/csp'
 
 const myDomains = [
     PolicyValue.SELF,
@@ -23,11 +23,11 @@ const myDomains = [
 ]
 
 const policyString = stringifyCSP({
-    [DIRECTIVES.DEFAULT_SRC]: [SELF],
-    [DIRECTIVES.CONNECT_SRC]: [
+    [Directive.DEFAULT_SRC]: [SELF],
+    [Directive.CONNECT_SRC]: [
         ...MY_DOMAINS,
     ],
-    [DIRECTIVES.SCRIPT_SRC]: [
+    [Directive.SCRIPT_SRC]: [
         PolicyValue.SELF,
         PolicyValue.UNSAFE_INLINE,
         PolicyValue.UNSAFE_EVAL,
@@ -35,13 +35,13 @@ const policyString = stringifyCSP({
         'https://www.googletagmanager.com',
         'https://tagmanager.google.com',
     ],
-    [DIRECTIVES.IMG_SRC]: [
+    [Directive.IMG_SRC]: [
         ...MY_DOMAINS,
         PolicyValue.DATA,
         PolicyValue.BLOB,
         'https://www.google-analytics.com',
     ],
-    [DIRECTIVES.STYLE_SRC]: [
+    [Directive.STYLE_SRC]: [
         PolicyValue.SELF,
         PolicyValue.UNSAFE_INLINE,
     ],

@@ -7,7 +7,7 @@ export enum PolicyValue {
     UNSAFE_EVAL = "'unsafe-eval'",
 }
 
-export enum FetchDirective {
+export enum Directive {
     CHILD_SRC = 'child-src',
     CONNECT_SRC = 'connect-src',
     DEFAULT_SRC = 'default-src',
@@ -25,35 +25,21 @@ export enum FetchDirective {
     STYLE_SRC_ELEM = 'style-src-elem',
     STYLE_SRC_ATTR = 'style-src-attr',
     WORKER_SRC = 'worker-src',
-}
-
-export enum DocumentDirective {
     BASE_URI = 'base-uri',
     PLUGIN_TYPES = 'plugin-types',
     SANDBOX = 'sandbox',
-}
-
-export enum NavigationDirective {
     FORM_ACTION = 'form-action',
     FRAME_ANCESTORS = 'frame-ancestors',
     NAVIGATE_TO = 'navigate-to',
-}
-
-export enum ReportingDirective {
     REPORT_URI = 'report-uri',
-    REPORT_TO = 'report-to'
-}
-
-export enum OtherDirective {
+    REPORT_TO = 'report-to',
     BLOCK_ALL_MIXED_CONTENT = 'block-all-mixed-content',
     REFERRER = 'referrer',
     REQUIRE_SRI_FOR = 'require-sri-for',
     REQUIRE_TRUSTED_TYPES_FOR = 'require-trusted-types-for',
     TRUSTED_TYPES = 'trusted-types',
-    UPGRADE_INSECURE_REQUESTS = 'upgrade-insecure-requests'
+    UPGRADE_INSECURE_REQUESTS = 'upgrade-insecure-requests',
 }
-
-export type Directive = FetchDirective | DocumentDirective | NavigationDirective | OtherDirective
 
 export type ContentSecurityPolicy = Record<Directive, Array<PolicyValue | string>>
 
