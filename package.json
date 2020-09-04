@@ -1,0 +1,20 @@
+{
+  "name": "@entur/csp",
+  "version": "1.0.0",
+  "description": "Generate CSP headers with help from TypeScript",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublish": "npm run build"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [],
+  "author": "Entur AS",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.0.2"
+  }
+}
